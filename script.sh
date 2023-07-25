@@ -1,1 +1,1 @@
-termux-info
+echo "hello world"
