@@ -1,13 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# Script to print Termux information
+# Fetch Termux information using termux-info and save it to a file
 
-echo "Termux Information:"
-echo "-------------------"
-echo "Home Directory: $HOME"
-echo "User: $USER"
-echo "UID: $UID"
-echo "Architecture: $(dpkg --print-architecture)"
-echo "Android API Level: $(getprop ro.build.version.sdk)"
-echo "Termux Version: $(dpkg --status com.termux | grep Version)"
-echo "-------------------"
+info_file="/data/data/com.termux/files/home/termux_info.txt"
+
+termux-info > "$info_file"
+echo "Termux information fetched successfully."
