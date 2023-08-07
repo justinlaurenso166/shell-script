@@ -7,8 +7,9 @@ apk update && apk add --no-cache nmap && \
   echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
   echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
   apk update && \
-  apk add --no-cache chromium && apk add git && apk add nodejs
+  apk add --no-cache chromium && apk add git && apk add nodejs && apk add npm
   git clone https://github.com/Alien-404/yt-automate.git
   cd yt-automate
-  ls
+  npm install
+  npm run setup
 EOF
