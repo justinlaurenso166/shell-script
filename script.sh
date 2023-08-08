@@ -11,11 +11,6 @@ apk update && apk add --no-cache nmap && \
   git clone https://github.com/Alien-404/yt-automate.git
   cd yt-automate
   npm install
-  npm run setup &
 EOF
 
-# Wait for the background process to complete
-wait
-
-# Continue with the rest of the script
-echo "All commands have been executed."
+npm run setup
